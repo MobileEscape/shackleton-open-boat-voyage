@@ -4,12 +4,11 @@ import { AppContext } from "contexts/app";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-import Icon1 from "assets/icons/SADDLE.png";
-import Icon2 from "assets/icons/HUMS.png";
-import Icon3 from "assets/icons/HEAR.png";
-import Icon4 from "assets/icons/WRIGHT.png";
-import Icon5 from "assets/icons/EVENT.png";
-import Icon6 from "assets/icons/ICE.png";
+import Icon1 from "assets/icons/CHART.png";
+import Icon2 from "assets/icons/NEWS.png";
+import Icon3 from "assets/icons/PAINT.png";
+import Icon4 from "assets/icons/SEXTANT.png";
+import Icon5 from "assets/icons/WUZZLE.png";
 
 import ShipInIce from "assets/Ship-in-ice.png";
 import ShipInIceLoading from "assets/Ship-in-ice-loading.png";
@@ -21,7 +20,7 @@ import MetaPuzzle from "components/meta-puzzle";
 
 const MainButton = lazy(() => import("components/buttons/main-button"));
 
-const Icons = [Icon1, Icon4, Icon2, Icon5, Icon3, Icon6];
+const Icons = [Icon1, Icon2, Icon3, Icon4, Icon5];
 
 interface MainGameFrame extends FrameProps {}
 

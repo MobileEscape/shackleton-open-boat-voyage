@@ -3,26 +3,18 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FunctionComponent, lazy } from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import CompassLoading from "../assets/contents/Compass-Loading.png";
-import Compass from "../assets/contents/Compass.png";
-import FlowCardLoading from "../assets/contents/FlowCard-Loading.png";
-import FlowCard from "../assets/contents/FlowCard.png";
-import MapLoading from "../assets/contents/Map-Loading.png";
-import Map from "../assets/contents/Map.png";
-import PagesLoading from "../assets/contents/Pages-Loading.png";
-import Pages from "../assets/contents/Pages.png";
-import PenguinsLoading from "../assets/contents/Penguins-Loading.png";
-import Penguins from "../assets/contents/Penguins.png";
-import SeatingChart from "../assets/contents/Seating-Chart.png";
-import SeatingChartLoading from "../assets/contents/Seating-Chart-Loading.png";
-import StoveParts from "../assets/contents/StoveParts.png";
-import StovePartsLoading from "../assets/contents/StoveParts-Loading.png";
-import TobaccoLoading from "../assets/contents/Tobacco-Loading.png";
-import Tobacco from "../assets/contents/Tobacco.png";
-import WildsNoteLoading from "../assets/contents/WildsNote-Loading.png";
-import WildsNote from "../assets/contents/WildsNote.png";
-import WuzzlePuzzleLoading from "../assets/contents/WuzzlePuzzle-Loading.png";
-import WuzzlePuzzle from "../assets/contents/WuzzlePuzzle.png";
+import Brush from "assets/contents/Brush.png";
+import FlowCard from "assets/contents/FlowCard.png";
+import Increments from "assets/contents/Increments.png";
+import Linocut from "assets/contents/Linocut.png";
+import Map from "assets/contents/Map.png";
+import NewsPaper from "assets/contents/NewsPaper.png";
+import Pages from "assets/contents/Pages.png";
+import Pallet from "assets/contents/Pallet.png";
+import Rime from "assets/contents/Rime.png";
+import Sextant from "assets/contents/Sextant.png";
+import Sightings from "assets/contents/Sightings.png";
+import Wuzzle from "assets/contents/Wuzzle.png";
 
 const MainButton = lazy(() => import("components/buttons/main-button"));
 interface OurApologiesProps extends FrameProps {}
@@ -30,61 +22,77 @@ interface OurApologiesProps extends FrameProps {}
 const getHelp = [
   {
     image: Map,
-    loading: MapLoading,
-    title: "Map",
+    loading: Map,
+    title: "Haakon Bay Map",
     text: `Your envelope should have a map. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: Penguins,
-    loading: PenguinsLoading,
-    title: "Penguin Artwork",
-    text: `Your envelope should have Penguin Artwork. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Brush,
+    loading: Brush,
+    title: "Paint Brush",
+    text: `Your envelope should have a Artist's Brush. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: SeatingChart,
-    loading: SeatingChartLoading,
-    title: "Seating Chart",
-    text: `Your envelope should have a Seating Chart. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Pallet,
+    loading: Pallet,
+    title: "Painter's Pallet",
+    text: `Your envelope should have a Painter's Pallet. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: StoveParts,
-    loading: StovePartsLoading,
-    title: "Stove Parts x 4",
-    text: `Your envelope should have a 4 Stove Parts. If you're missing any of them please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Sightings,
+    loading: Sightings,
+    title: "Sightings Table",
+    text: `Your envelope should have Sightings table. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+  },
+
+  {
+    image: Increments,
+    loading: Increments,
+    title: "Increments and Corrections Chart",
+    text: `Your envelope should have an Increments and Corrections Chart. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
     image: Pages,
-    loading: PagesLoading,
-    title: "Journal Pages x 5",
+    loading: Pages,
+    title: "5 Journal Pages",
     text: `Your envelope should have 5 Journal Pages. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
+
   {
-    image: Tobacco,
-    loading: TobaccoLoading,
-    title: "Tobacco Paper",
-    text: `Your envelope should have Tobacco Paper. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Sextant,
+    loading: Sextant,
+    title: "Sextant Tool",
+    text: `Your envelope should have a Sextant tool. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: WuzzlePuzzle,
-    loading: WuzzlePuzzleLoading,
-    title: "Wuzzle Puzzle",
-    text: `Your envelope should have a Wuzzle. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Wuzzle,
+    loading: Wuzzle,
+    title: "Wuzzle",
+    text: `Your envelope should have a Wuzzle Puzzle. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: Compass,
-    loading: CompassLoading,
-    title: "Compass Wheel",
-    text: `Your envelope should have a Compass Wheel. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: Linocut,
+    loading: Linocut,
+    title: "Sky Linocut",
+    text: `Your envelope should have a Sky Linocut. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: WildsNote,
-    loading: WildsNoteLoading,
-    title: "Wild's Note",
-    text: `Your envelope should have Wild's Note. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+    image: NewsPaper,
+    loading: NewsPaper,
+    title: "NewsPaper Clipping",
+    text: `Your envelope should have a NewsPaper Clipping. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
+
+  {
+    image: Rime,
+    loading: Rime,
+    title: "Rime of the Mariner",
+    text: `Your envelope should have a Rime of the Mariner. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+  },
+
   {
     image: FlowCard,
-    loading: FlowCardLoading,
+    loading: FlowCard,
     title: "Flow Card",
     text: `Your envelope should have a Flow Card. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },

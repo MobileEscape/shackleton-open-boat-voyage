@@ -8,12 +8,11 @@ import {
 } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Icon1 from "assets/icons/SADDLE.png";
-import Icon2 from "assets/icons/HUMS.png";
-import Icon3 from "assets/icons/HEAR.png";
-import Icon4 from "assets/icons/WRIGHT.png";
-import Icon5 from "assets/icons/EVENT.png";
-import Icon6 from "assets/icons/ICE.png";
+import Icon1 from "assets/icons/CHART.png";
+import Icon2 from "assets/icons/NEWS.png";
+import Icon3 from "assets/icons/PAINT.png";
+import Icon4 from "assets/icons/SEXTANT.png";
+import Icon5 from "assets/icons/WUZZLE.png";
 
 import CastleLoading from "assets/Background Images/Castle-Loading.png";
 import Castle from "assets/Background Images/Castle.png";
@@ -40,47 +39,33 @@ import { AppContext } from "contexts/app";
 
 const MainButton = lazy(() => import("components/buttons/main-button"));
 
-const Icons = [Icon1, Icon4, Icon2, Icon5, Icon3, Icon6];
+const Icons = [Icon1, Icon2, Icon3, Icon4, Icon5];
 
 interface MainGameFrame extends FrameProps {}
 
 const answers = [
-  "saddle",
-  "wright",
-  "hums",
-  "event",
-  "hear",
-  "ice",
+  "risky",
+  "permission",
+  "rinse",
+  "finale",
+  "honest",
   "totheice",
 ];
 
-const messages = [
-  "142,178,214",
-  "42,82,208,72,180,16",
-  "268-280,80,6,140,116,352",
-  "196-224",
-  "264,124,350-0,278",
-  "96,134,110-122",
-];
-
-const bearings = ["120", "160", "130", "60", "270", "90"];
-
 const givenLetters = [
-  ["", "", "", "", "", "E"],
-  ["W", "", "", "", "", ""],
-  ["", "", "", "S"],
   ["", "", "", "", ""],
-  ["", "E", "", ""],
-  ["", "", ""],
+  ["", "", "", "", "", "", "", "", "", "N"],
+  ["", "", "", "", ""],
+  ["", "", "", "", "", ""],
+  ["H", "", "", "", "", ""],
 ];
 
 const backgroundImage: any = {
-  saddle: [Seal, SealLoading],
-  wright: [Penguin, PenguinLoading],
-  hums: [Castle, CastleLoading],
-  event: [Polaroid, PolaroidLoading],
-  hear: [Icefield, IcefieldLoading],
-  ice: [Match, MatchLoading],
+  risky: [Seal, SealLoading],
+  permission: [Penguin, PenguinLoading],
+  rinse: [Castle, CastleLoading],
+  finale: [Polaroid, PolaroidLoading],
+  honest: [Icefield, IcefieldLoading],
   totheice: [ShipInIce, ShipInIceLoading],
 };
 
@@ -201,9 +186,9 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
             Check Puzzle Answers
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 items-center m-auto justify-center gap-4 my-4 md:my-12 p-4 z-30">
+          <div className="grid grid-cols-5  m-auto justify-center gap-4  p-4 z-30">
             {Icons.map((x, i) => (
-              <div className="group flex gap-2">
+              <div className="group flex flex-col gap-2">
                 <PuzzleField
                   changeImage={changeImage}
                   givenLetters={givenLetters[i]}
@@ -216,23 +201,6 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
             ))}
           </div>
 
-          <div className="bg-black w-full h-[3px] my-8" />
-          <h1 className="relative text-center font-kingEdwards text-primary font-semibold text-5xl md:text-6xl z-10">
-            Enter Bearings
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 items-center m-auto justify-center md:gap-4 gap-4 my-4 md:my-12 p-4 z-30">
-            {bearings.map((_, i) => (
-              <div className="group flex">
-                <PuzzleBearing
-                  index={i}
-                  message={messages[i]}
-                  answer={bearings[i]}
-                  key={`answer-${i}`}
-                  solvePuzzle={() => setSolveBearings((prev) => prev + 1)}
-                />
-              </div>
-            ))}
-          </div>
           <div className="bg-black w-full h-[3px] my-8" />
           <h1 className="relative z-10 text-center font-kingEdwards text-primary font-semibold text-5xl mt-3 md:my-10 md:text-6xl my-12 ">
             Solve The Meta Puzzle

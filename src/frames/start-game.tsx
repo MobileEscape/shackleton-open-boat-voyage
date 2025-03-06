@@ -39,7 +39,7 @@ const StartGame: FunctionComponent<YourFirstMissionFrameProps> = ({
             onClick={() => navigate("/recap")}
             className="z-30 text-secondary hover:text-primary transition duration-300 cursor-pointer"
           >
-            Episode 3
+            Episode 4
           </a>
           , or:
         </p>

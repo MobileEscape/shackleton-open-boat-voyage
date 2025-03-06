@@ -17,16 +17,16 @@ const HintImageFrame: FunctionComponent<HintImageProps> = ({}) => {
           fast in the ice and would remain so for the duration of the 1915
           Antarctic winter. The break-up of the ice that spring would prove
           fatal to the ship as she was slowly crushed and took on water.
-          Shackleton ordered the crew to the ice where they would regroup in
-          order to make the long trek to reach land and rescue.
+          Shackleton ordered the crew to the ice where they would wait for
+          months, drifting and meagerly surviving. Once the ice had broken up,
+          Shackleton ordered the lifeboats to be launched and a harrowing,
+          sleepless week commenced in which the crew narrowly survived the trip
+          to Elephant Island. Once on land, Shackleton knew what he must do.
           <br />
           <br />
-          The long trek never happened as the ice was impassable to the convoy.
-          The next few months saw the crew drifting on ice, meagerly surviving,
-          and waiting for the ice pack to break up enough to get into the
-          lifeboats. Then, Shackleton planned to head for land and rescue. This
-          was the moment they had long awaited. Now all that was left was to
-          actually accomplish it.
+          Now, with five others, Shackleton plans to board the James Caird once
+          again for an 800-mile voyage to South Georgia. Here he hopes to find
+          help and rescue the remaining crew members.
         </p>
         <MainButton
           onClick={() => navigate(-1)}
