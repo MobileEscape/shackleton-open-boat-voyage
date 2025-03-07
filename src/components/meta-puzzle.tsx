@@ -8,14 +8,6 @@ const MetaPuzzle = () => {
   const { advance, setPaused } = useContext(AppContext);
   const [solved, setSolved] = useState(false);
   const [value, setValue] = useState([
-    "E",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "N",
     "",
     "",
     "",
@@ -24,13 +16,6 @@ const MetaPuzzle = () => {
     "",
     "",
     "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "E",
     "",
     "",
     "",
@@ -41,7 +26,7 @@ const MetaPuzzle = () => {
   ]);
   const [err, setErr] = useState(false);
 
-  const answer = "EIGHTHUNDREDMILESRESCUETHECREW";
+  const answer = "ONEFINALMISSION";
 
   useEffect(() => {
     const storage = window.sessionStorage.getItem(answer);
@@ -177,16 +162,16 @@ const MetaPuzzle = () => {
   return (
     <div className="flex flex-col items-center ">
       <h3 className="relative z-10 text-xl  font-black font-frank m-4 ">
-        "My new mission is clear. I know what I must do:"
+        "That which is left for me to accomplish. That which lies ahead"
       </h3>
       <div className="gap-2 my-3 flex flex-col items-center">
         <div className="flex gap-2">
-          {["e", "i", "g", "h", "t"].map((_, index) => (
+          {["o", "n", "e"].map((_, index) => (
             <input
               id={`${answer}-${index + 1}`}
               key={`${answer}-${index + 1}`}
               className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
+                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pr-2 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
                 solved ? "ring-green-400 shadow-green-600" : "",
                 err ? "ring-red-400 shadow-red-600" : ""
               )}
@@ -206,12 +191,12 @@ const MetaPuzzle = () => {
           ))}
         </div>
         <div className="flex gap-2">
-          {["h", "u", "n", "d", "r", "e", "d"].map((_, index) => (
+          {["f", "i", "n", "a", "l"].map((_, index) => (
             <input
-              id={`${answer}-${index + 6}`}
-              key={`${answer}-${index + 6}`}
+              id={`${answer}-${index + 4}`}
+              key={`${answer}-${index + 4}`}
               className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
+                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pr-2 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
                 solved ? "ring-green-400 shadow-green-600" : "",
                 err ? "ring-red-400 shadow-red-600" : ""
               )}
@@ -224,19 +209,19 @@ const MetaPuzzle = () => {
               onFocus={(e) => {
                 e.currentTarget.select();
               }}
-              value={value[index + 5]}
-              onChange={(e) => handleChange(index + 5, e.target.value)}
+              value={value[index + 3]}
+              onChange={(e) => handleChange(index + 3, e.target.value)}
               onKeyUp={keyboardClick}
             />
           ))}
         </div>
-        <div className="flex gap-2">
-          {["m", "i", "l", "e", "s"].map((_, index) => (
+        <div className="flex gap-2 mb-10">
+          {["m", "i", "s", "s", "i", "o", "n"].map((_, index) => (
             <input
-              id={`${answer}-${index + 13}`}
-              key={`${answer}-${index + 13}`}
+              id={`${answer}-${index + 9}`}
+              key={`${answer}-${index + 9}`}
               className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
+                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pr-2 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
                 solved ? "ring-green-400 shadow-green-600" : "",
                 err ? "ring-red-400 shadow-red-600" : ""
               )}
@@ -249,83 +234,8 @@ const MetaPuzzle = () => {
               onFocus={(e) => {
                 e.currentTarget.select();
               }}
-              value={value[index + 12]}
-              onChange={(e) => handleChange(index + 12, e.target.value)}
-              onKeyUp={keyboardClick}
-            />
-          ))}
-        </div>
-        <div className="flex gap-2">
-          {["r", "e", "s", "c", "u", "e"].map((_, index) => (
-            <input
-              id={`${answer}-${index + 18}`}
-              key={`${answer}-${index + 18}`}
-              className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
-                solved ? "ring-green-400 shadow-green-600" : "",
-                err ? "ring-red-400 shadow-red-600" : ""
-              )}
-              onClick={(e) => {
-                e.currentTarget.select();
-              }}
-              maxLength={1}
-              type="text"
-              disabled={solved}
-              onFocus={(e) => {
-                e.currentTarget.select();
-              }}
-              value={value[index + 17]}
-              onChange={(e) => handleChange(index + 17, e.target.value)}
-              onKeyUp={keyboardClick}
-            />
-          ))}
-        </div>
-        <div className="flex gap-2">
-          {["t", "h", "e"].map((_, index) => (
-            <input
-              id={`${answer}-${index + 24}`}
-              key={`${answer}-${index + 24}`}
-              className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
-                solved ? "ring-green-400 shadow-green-600" : "",
-                err ? "ring-red-400 shadow-red-600" : ""
-              )}
-              onClick={(e) => {
-                e.currentTarget.select();
-              }}
-              maxLength={1}
-              type="text"
-              disabled={solved}
-              onFocus={(e) => {
-                e.currentTarget.select();
-              }}
-              value={value[index + 23]}
-              onChange={(e) => handleChange(index + 23, e.target.value)}
-              onKeyUp={keyboardClick}
-            />
-          ))}
-        </div>
-        <div className="flex gap-2">
-          {["c", "r", "e", "w"].map((_, index) => (
-            <input
-              id={`${answer}-${index + 27}`}
-              key={`${answer}-${index + 27}`}
-              className={classNames(
-                "md:w-8 md:h-12 h-10 w-7 rounded-md caret-transparent ring-2 ring-black focus:outline-secondary selection:bg-transparent bg-white/50 z-20 transition duration-200 ease-in text-center font-frank pt-3 font-semibold md:text-4xl text-3xl justify-center shadow-md shadow-black",
-                solved ? "ring-green-400 shadow-green-600" : "",
-                err ? "ring-red-400 shadow-red-600" : ""
-              )}
-              onClick={(e) => {
-                e.currentTarget.select();
-              }}
-              maxLength={1}
-              type="text"
-              disabled={solved}
-              onFocus={(e) => {
-                e.currentTarget.select();
-              }}
-              value={value[index + 26]}
-              onChange={(e) => handleChange(index + 26, e.target.value)}
+              value={value[index + 8]}
+              onChange={(e) => handleChange(index + 8, e.target.value)}
               onKeyUp={keyboardClick}
             />
           ))}

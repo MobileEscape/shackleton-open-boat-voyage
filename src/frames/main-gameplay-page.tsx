@@ -8,6 +8,8 @@ import {
 } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
+import SolutionPage from "assets/SolutionPage.jpg";
 import Icon1 from "assets/icons/CHART.png";
 import Icon2 from "assets/icons/NEWS.png";
 import Icon3 from "assets/icons/PAINT.png";
@@ -18,8 +20,6 @@ import CastleLoading from "assets/Background Images/Castle-Loading.png";
 import Castle from "assets/Background Images/Castle.png";
 import IcefieldLoading from "assets/Background Images/Icefield-Loading.png";
 import Icefield from "assets/Background Images/Icefield.png";
-import MatchLoading from "assets/Background Images/Match-Loading.png";
-import Match from "assets/Background Images/Match.png";
 import PenguinLoading from "assets/Background Images/Penguin-Loading.png";
 import Penguin from "assets/Background Images/Penguin.png";
 import PolaroidLoading from "assets/Background Images/Polaroid-Loading.png";
@@ -28,8 +28,6 @@ import SealLoading from "assets/Background Images/Seal-Loading.png";
 import Seal from "assets/Background Images/Seal.png";
 import ShipInIceLoading from "assets/Ship-in-ice-loading.png";
 import ShipInIce from "assets/Ship-in-ice.png";
-
-import PuzzleBearing from "components/puzzle-bearings";
 
 import Border from "assets/Border-2.png";
 import PuzzleField from "components/puzzle-fields";
@@ -49,7 +47,7 @@ const answers = [
   "rinse",
   "finale",
   "honest",
-  "totheice",
+  "onefinalmission",
 ];
 
 const givenLetters = [
@@ -66,14 +64,13 @@ const backgroundImage: any = {
   rinse: [Castle, CastleLoading],
   finale: [Polaroid, PolaroidLoading],
   honest: [Icefield, IcefieldLoading],
-  totheice: [ShipInIce, ShipInIceLoading],
+  onefinalmission: [ShipInIce, ShipInIceLoading],
 };
 
 const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
   const { advance } = useContext(AppContext);
   const [bgImage, setbgImage] = useState("");
   const [solved, setSolved] = useState(0);
-  const [solvedBearings, setSolveBearings] = useState(0);
   const [visible, setVisible] = useState("hidden bg-black/0 opacity-0");
 
   const changeImage = (answer: string) => {
@@ -83,18 +80,11 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
   };
 
   useEffect(() => {
-    if (solved == 6) {
+    if (solved == 5) {
       setVisible("");
       setTimeout(() => setVisible("bg-black/80 opacity-100"), 100);
     }
   }, [solved]);
-
-  useEffect(() => {
-    if (solvedBearings == 6) {
-      setVisible("");
-      setTimeout(() => setVisible("bg-black/80 opacity-100"), 100);
-    }
-  }, [solvedBearings]);
 
   return (
     <Frame index={index}>
@@ -106,49 +96,20 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
               visible
             )}
           >
-            {solved == 6 && solvedBearings != 6 ? (
+            {solved == 5 && (
               <div className="text-center">
-                <h1 className="relative z-10 mt-[30vh] text-center font-kingEdwards text-white font-semibold text-5xl md:text-6xl">
-                  Well done! Now:
-                  <br />
-                  1. Enter answers onto the compass.
-                  <br />
-                  2. Find the bearings.
-                  <br />
-                  3. Deduce the final answer.
+                <h1 className="relative z-10 mt-[20vh] text-center font-kingEdwards text-white font-semibold text-5xl md:text-6xl">
+                  {" "}
+                  Well done! Now fill in the fields in the solution page:
                 </h1>
-                <button
-                  onClick={() => setVisible("hidden bg-black/0 opacity-0")}
-                  className=" font-kingEdwards text-white font-semibold text-4xl md:text-5xl my-5 hover:bg-gray-300 border border-white rounded-lg px-2"
-                >
-                  Close
-                </button>
-              </div>
-            ) : solved != 6 && solvedBearings == 6 ? (
-              <div className="text-center">
-                <h1 className="relative z-10 mt-[30vh] text-center font-kingEdwards text-white font-semibold text-5xl md:text-6xl">
+                <img
+                  src={SolutionPage}
+                  className="w-full h-full max-w-[600px] m-auto"
+                />
+                <h1 className="relative z-10  text-center font-kingEdwards text-white font-semibold text-5xl md:text-6xl">
                   {" "}
-                  Well done! Now:
-                  <br />
-                  1. Get all the answers from the previous section.
-                  <br />
-                  2. Enter them onto the compass
-                  <br />
-                  3. Solve the meta puzzle
-                </h1>{" "}
-                <button
-                  onClick={() => setVisible("hidden bg-black/0 opacity-0")}
-                  className=" font-kingEdwards text-white font-semibold text-4xl md:text-5xl my-5 hover:bg-gray-300 border border-white rounded-lg px-2"
-                >
-                  Close
-                </button>
-              </div>
-            ) : (
-              <div className="text-center">
-                <h1 className="relative z-10 mt-[30vh] text-center font-kingEdwards text-white font-semibold text-5xl md:text-6xl">
-                  {" "}
-                  Well done! Now solve the meta puzzle!
-                </h1>{" "}
+                  And solve the Meta Puzzle
+                </h1>
                 <button
                   onClick={() => {
                     setVisible("hidden bg-black/0 opacity-0");
@@ -156,7 +117,7 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
                   }}
                   className=" font-kingEdwards text-white font-semibold text-4xl md:text-5xl my-5 hover:bg-gray-300 border border-white rounded-lg px-2"
                 >
-                  Close
+                  Next
                 </button>
               </div>
             )}
@@ -186,9 +147,9 @@ const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
             Check Puzzle Answers
           </h1>
 
-          <div className="grid grid-cols-5  m-auto justify-center gap-4  p-4 z-30">
+          <div className="grid grid-cols-5 md:grid-cols-1 md:flex md:flex-col-reverse m-auto justify-center gap-4 p-4 z-30">
             {Icons.map((x, i) => (
-              <div className="group flex flex-col gap-2">
+              <div className="group flex flex-col md:flex-row gap-2">
                 <PuzzleField
                   changeImage={changeImage}
                   givenLetters={givenLetters[i]}

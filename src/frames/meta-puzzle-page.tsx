@@ -31,7 +31,7 @@ const answers = [
   "event",
   "hear",
   "ice",
-  "totheice",
+  "onefinalmission",
 ];
 
 const backgroundImage: any = {
