@@ -16,18 +16,18 @@ import Icon3 from "assets/icons/PAINT.png";
 import Icon4 from "assets/icons/SEXTANT.png";
 import Icon5 from "assets/icons/WUZZLE.png";
 
-import CastleLoading from "assets/Background Images/Castle-Loading.png";
-import Castle from "assets/Background Images/Castle.png";
-import IcefieldLoading from "assets/Background Images/Icefield-Loading.png";
-import Icefield from "assets/Background Images/Icefield.png";
-import PenguinLoading from "assets/Background Images/Penguin-Loading.png";
-import Penguin from "assets/Background Images/Penguin.png";
-import PolaroidLoading from "assets/Background Images/Polaroid-Loading.png";
-import Polaroid from "assets/Background Images/Polaroid.png";
-import SealLoading from "assets/Background Images/Seal-Loading.png";
-import Seal from "assets/Background Images/Seal.png";
-import ShipInIceLoading from "assets/Ship-in-ice-loading.png";
-import ShipInIce from "assets/Ship-in-ice.png";
+import AnglesLoading from "assets/Background Images/Angles-Loading.png";
+import Angles from "assets/Background Images/Angles.png";
+import ChartLoading from "assets/Background Images/Chart-Loading.png";
+import Chart from "assets/Background Images/Chart.png";
+import PaintLoading from "assets/Background Images/Paint-Loading.png";
+import Paint from "assets/Background Images/Paint.png";
+import WarAndPoem from "assets/Background Images/WarAndPoem.png";
+import WarAndPoemLoading from "assets/Background Images/WarAndPoem-Loading.png";
+import WuzzleLoading from "assets/Background Images/Wuzzle-Loading.png";
+import Wuzzle from "assets/Background Images/Wuzzle.png";
+import ShipLoading from "assets/Ship-in-ice-loading.png";
+import Ship from "assets/Ship-in-ice.png";
 
 import Border from "assets/Border-2.png";
 import PuzzleField from "components/puzzle-fields";
@@ -59,12 +59,12 @@ const givenLetters = [
 ];
 
 const backgroundImage: any = {
-  risky: [Seal, SealLoading],
-  permission: [Penguin, PenguinLoading],
-  rinse: [Castle, CastleLoading],
-  finale: [Polaroid, PolaroidLoading],
-  honest: [Icefield, IcefieldLoading],
-  onefinalmission: [ShipInIce, ShipInIceLoading],
+  risky: [Chart, ChartLoading],
+  permission: [WarAndPoem, WarAndPoemLoading],
+  rinse: [Paint, PaintLoading],
+  finale: [Angles, AnglesLoading],
+  honest: [Wuzzle, WuzzleLoading],
+  onefinalmission: [Ship, ShipLoading],
 };
 
 const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
