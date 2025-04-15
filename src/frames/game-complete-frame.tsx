@@ -80,7 +80,7 @@ const JohnsonIsInFrame: FunctionComponent<JohnsonIsInFrameProps> = ({
               className="absolute max-w-[90vw] w-full h-full top-0 left-0 z-0 "
             />
             <p className="relative text-2xl my-8 font-mrsEaves mx-3 md:mx-16 z-10">
-              {`You have successfully completed Episode 4 of the Shackleton Series! Your time was: ${`0${hours}`.slice(
+              {`You have successfully completed Episode 5 of the Shackleton Series! Your time was: ${`0${hours}`.slice(
                 -2
               )}:${`0${minutes}`.slice(-2)}:${`0${seconds}`.slice(-2)} `}
             </p>

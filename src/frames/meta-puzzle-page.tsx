@@ -4,12 +4,6 @@ import { AppContext } from "contexts/app";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-import Icon1 from "assets/icons/CHART.png";
-import Icon2 from "assets/icons/NEWS.png";
-import Icon3 from "assets/icons/PAINT.png";
-import Icon4 from "assets/icons/SEXTANT.png";
-import Icon5 from "assets/icons/WUZZLE.png";
-
 import ShipInIce from "assets/Ship-in-ice.png";
 import ShipInIceLoading from "assets/Ship-in-ice-loading.png";
 
@@ -19,8 +13,6 @@ import classNames from "classnames";
 import MetaPuzzle from "components/meta-puzzle";
 
 const MainButton = lazy(() => import("components/buttons/main-button"));
-
-const Icons = [Icon1, Icon2, Icon3, Icon4, Icon5];
 
 interface MainGameFrame extends FrameProps {}
 
@@ -34,19 +26,8 @@ const answers = [
   "onefinalmission",
 ];
 
-const backgroundImage: any = {
-  totheice: [ShipInIce, ShipInIceLoading],
-};
-
 const MainGameFrame: FunctionComponent<MainGameFrame> = ({ index }) => {
-  const [bgImage, setbgImage] = useState("");
   const { setStep } = useContext(AppContext);
-
-  const changeImage = (answer: string) => {
-    if (bgImage === answer) return;
-    setbgImage("");
-    setTimeout(() => setbgImage(answer), 500);
-  };
 
   return (
     <Frame index={index}>
