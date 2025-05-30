@@ -1,6 +1,6 @@
 [
   {
-    "puzzle": "Solution Order (Boat Cargo)",
+    "puzzle": "Boat Cargo",
     "hints": [
       {
         "label": "Small Hint",
@@ -42,23 +42,57 @@
     ]
   },
   {
-    "puzzle": "Increments & Corrections Chart",
+    "puzzle": "Sextant Sightings",
     "hints": [
       {
-        "label": "Small Hint",
-        "text": "On page 52, Worsley tries to make something very clear.<br/>Days 1-5 and the Increments & Corrections is all you need here.<br/>Using two simple things he is trying to enable.<br/>Ignore the 6th day and any other tools or tables."
+        "label": "Nudge",
+        "text": "The overall goal of this puzzle is to use the 6 readings from page 52 to obtain a 6-letter word from the Sightings Degrees Table by using the Sextant and the Night Sky picture."
       },
       {
-        "label": "Medium Hint",
-        "text": "There are several pieces of information to track.<br/>If you miss a step you’ll need to go back.<br/>First - Each reading is taken 1 meter above the sea.<br/>Second - Noting the planet seen each day is key.<br/>Third - You now have a number between 9 and 29.<br/>Fourth - That number is then modified depending on the time.<br/>Fifth - Modify the number again depending on the season.<br/>Sixth - The number can become a letter and gives it a reason."
+        "label": "Part 1 - Using the Sextant",
+        "parts": [
+          {
+            "label": "Small Hint",
+            "text": "If you’re having trouble don’t lose heart.<br>Understanding how to use the sextant is a good place to start.<br>Use page 51, the sextant, and the night sky to begin.<br>Replicating the example will set you up for a win.<br>Understanding how this tool works, builds a foundation.<br>Now understanding the readings won’t lead to frustration."
+          },
+          {
+            "label": "Medium Hint",
+            "text": "Place the sextant on the outline in the night sky.<br>Point the input angle arm to the moon - give it a try.<br>Now move the armature until the input and output angles are the same.<br>If you’ve done it properly, having them both at 30° is the aim.<br>At the base of the sextant a reading of roughly 55 is visible.<br>That reading can now be used on your Sighting Degrees Table."
+          },
+          {
+            "label": "Big Hint",
+            "text": "Now you know how to use the sextant along with the night sky.<br>Notes from all 6 days are required or the crew is sure to die!<br>“What information do I need from the Navigation Log?” you might ask.<br>Each day only holds two pieces of information that are crucial to the task.<br>First, what planet was spotted, and second, was it in the AM or PM?<br>Now use those sextant skills and repeat the process for each of them."
+          },
+          {
+            "label": "Solution",
+            "text": "Using Worsley’s instructions for how to use the sextant on Page 51, the Navigational Log (page 52), the sextant, and the night sky picture, you can obtain an Armature Reading for each of the 6 sightings on Page 52. For a demonstration of how that is done, you can see <a href='#/hint-image?image=Sextant' style='color: lightblue;'>video here</a><br><br> Repeating this for each of the six sightings should yield the following Armature Readings. Note that these readings do not need to be exact. Rounding to the nearest 5th is sufficient:<br><ul><li>27 April - Moon AM: ~ 55</li><li>29 April - Saturn PM: ~ 75</li><li>4 May - Mars AM: ~ 85</li><li>5 May - Venus AM: ~40</li><li>7 May - Sun PM: ~ 55</li><li>8 May - Jupiter AM: ~110</li></ul>"
+          }
+        ]
       },
       {
-        "label": "Big Hint",
-        "text": "On April 27, they spotted the moon at midnight.<br/>At 1 meter above sea level, that is 26, right?<br/>Modify that number knowing midnight is the time of day.<br/>Modify it again since we know it’s between March and May.<br/>The title of the chart says “A=1” to make your next step clear:<br/>Translate each reading to a letter and the solution is near."
-      },
-      {
-        "label": "Solution",
-        "text": "On page 52 Worsley’s Navigational Log shows 6 days of readings in total. However, he mentions that the first time he used the readings, he just used Days 1-5 and the “Increments and Corrections Chart”. Do not be distracted by any other pieces.<br><br> On April 27, they spotted the moon at midnight, and he mentions that all readings were taken at 1 meter above sea level. Using that information on the “Increments and Corrections Chart” you get the number 26. However, you then need to modify that number based on the time of day and the season. Since the reading was taken at midnight, you subtract 4, as seen in the “Time of Day Modifier” section, which brings you to 22. Then, using the “Month Modifier” section you subtract another 4 because it falls between March and May. Your final number is 18. In the title there is a clue which says “A=1”. You now need to make an alphanumeric translation of “18” to get the letter “<b>R</b>”.<br><br> Repeat this process for all 5 days as follows:<br><ul><li>27 April: 26 - 4 - 4 = 18 = <b>R</b></li><li>29 April: 10 + 3 - 4 = 9 = <b>I</b></li><li>4 May: 26 - 3 - 4 = 19 = <b>S</b></li><li>5 May: 17 - 2 - 4 = 11 = <b>K</b></li><li>7 May: 28 + 1 - 4 = 25 = <b>Y</b></li></ul>"
+        "label": "Part 2 - Using the Sighting Degrees Table",
+        "parts": [
+          {
+            "label": "Nudge",
+            "text": "Using the sextant, you should feel confident and able.<br>Ensure this, before attempting to use the green Sightings Table."
+          },
+          {
+            "label": "Small Hint",
+            "text": "The Sighting Degrees Table shows numbers in ranges.<br>Depending on AM/PM, and which planet, the span changes.<br>Plot the six Armature Readings from the spheres in the sky.<br>Find their southern hemisphere letters, and you’ll see why."
+          },
+          {
+            "label": "Medium Hint",
+            "text": "Getting a reading from the table requires four pieces of information.<br>First - Note the hemisphere based on their location.<br>Second - What planet is in question?<br>Third - Was the reading taken in the morning, or evening?<br>Fourth - Use the number from the sextant’s Armature Reading."
+          },
+          {
+            "label": "Big Hint",
+            "text": "On day one, at midnight (which is AM) the moon was spotted.<br>The Armature Reading of 55 must now be plotted.<br>The moon has a range of 53-67, in the AM, on row eight.<br>In the southern hemisphere, the letter “F” will correlate."
+          },
+          {
+            "label": "Solution",
+            "text": "The readings from Part 1 can now be plotted in the green Sighting Degrees Table. <a href='#/hint-image?image=SightingTable' style='color: lightblue;'>This image</a> shows an example of how the first reading of 55 for the Moon (AM = top set of numbers) will yield the letter F. By following those directions for each of the 6 readings you will get the answer <b>FINALE</b>."
+          }
+        ]
       }
     ]
   },
@@ -139,57 +173,23 @@
     ]
   },
   {
-    "puzzle": "Sextant Sightings & Degrees Table",
+    "puzzle": "Inc' & Correct Chart",
     "hints": [
       {
-        "label": "Nudge",
-        "text": "The overall goal of this puzzle is to use the 6 readings from page 52 to obtain a 6-letter word from the Sightings Degrees Table by using the Sextant and the Night Sky picture."
+        "label": "Small Hint",
+        "text": "On page 52, Worsley tries to make something very clear.<br/>Days 1-5 and the Increments & Corrections is all you need here.<br/>Using two simple things he is trying to enable.<br/>Ignore the 6th day and any other tools or tables."
       },
       {
-        "label": "Part 1 - Using the Sextant",
-        "parts": [
-          {
-            "label": "Small Hint",
-            "text": "If you’re having trouble don’t lose heart.<br>Understanding how to use the sextant is a good place to start.<br>Use page 51, the sextant, and the night sky to begin.<br>Replicating the example will set you up for a win.<br>Understanding how this tool works, builds a foundation.<br>Now understanding the readings won’t lead to frustration."
-          },
-          {
-            "label": "Medium Hint",
-            "text": "Place the sextant on the outline in the night sky.<br>Point the input angle arm to the moon - give it a try.<br>Now move the armature until the input and output angles are the same.<br>If you’ve done it properly, having them both at 30° is the aim.<br>At the base of the sextant a reading of roughly 55 is visible.<br>That reading can now be used on your Sighting Degrees Table."
-          },
-          {
-            "label": "Big Hint",
-            "text": "Now you know how to use the sextant along with the night sky.<br>Notes from all 6 days are required or the crew is sure to die!<br>“What information do I need from the Navigation Log?” you might ask.<br>Each day only holds two pieces of information that are crucial to the task.<br>First, what planet was spotted, and second, was it in the AM or PM?<br>Now use those sextant skills and repeat the process for each of them."
-          },
-          {
-            "label": "Solution",
-            "text": "Using Worsley’s instructions for how to use the sextant on Page 51, the Navigational Log (page 52), the sextant, and the night sky picture, you can obtain an Armature Reading for each of the 6 sightings on Page 52. For a demonstration of how that is done, you can see <a href='#/hint-image?image=Sextant' style='color: lightblue;'>video here</a><br><br> Repeating this for each of the six sightings should yield the following Armature Readings. Note that these readings do not need to be exact. Rounding to the nearest 5th is sufficient:<br><ul><li>27 April - Moon AM: ~ 55</li><li>29 April - Saturn PM: ~ 75</li><li>4 May - Mars AM: ~ 85</li><li>5 May - Venus AM: ~40</li><li>7 May - Sun PM: ~ 55</li><li>8 May - Jupiter AM: ~110</li></ul>"
-          }
-        ]
+        "label": "Medium Hint",
+        "text": "There are several pieces of information to track.<br/>If you miss a step you’ll need to go back.<br/>First - Each reading is taken 1 meter above the sea.<br/>Second - Noting the planet seen each day is key.<br/>Third - You now have a number between 9 and 29.<br/>Fourth - That number is then modified depending on the time.<br/>Fifth - Modify the number again depending on the season.<br/>Sixth - The number can become a letter and gives it a reason."
       },
       {
-        "label": "Part 2 - Using the Sighting Degrees Table",
-        "parts": [
-          {
-            "label": "Nudge",
-            "text": "Using the sextant, you should feel confident and able.<br>Ensure this, before attempting to use the green Sightings Table."
-          },
-          {
-            "label": "Small Hint",
-            "text": "The Sighting Degrees Table shows numbers in ranges.<br>Depending on AM/PM, and which planet, the span changes.<br>Plot the six Armature Readings from the spheres in the sky.<br>Find their southern hemisphere letters, and you’ll see why."
-          },
-          {
-            "label": "Medium Hint",
-            "text": "Getting a reading from the table requires four pieces of information.<br>First - Note the hemisphere based on their location.<br>Second - What planet is in question?<br>Third - Was the reading taken in the morning, or evening?<br>Fourth - Use the number from the sextant’s Armature Reading."
-          },
-          {
-            "label": "Big Hint",
-            "text": "On day one, at midnight (which is AM) the moon was spotted.<br>The Armature Reading of 55 must now be plotted.<br>The moon has a range of 53-67, in the AM, on row eight.<br>In the southern hemisphere, the letter “F” will correlate."
-          },
-          {
-            "label": "Solution",
-            "text": "The readings from Part 1 can now be plotted in the green Sighting Degrees Table. <a href='#/hint-image?image=SightingTable' style='color: lightblue;'>This image</a> shows an example of how the first reading of 55 for the Moon (AM = top set of numbers) will yield the letter F. By following those directions for each of the 6 readings you will get the answer <b>FINALE</b>."
-          }
-        ]
+        "label": "Big Hint",
+        "text": "On April 27, they spotted the moon at midnight.<br/>At 1 meter above sea level, that is 26, right?<br/>Modify that number knowing midnight is the time of day.<br/>Modify it again since we know it’s between March and May.<br/>The title of the chart says “A=1” to make your next step clear:<br/>Translate each reading to a letter and the solution is near."
+      },
+      {
+        "label": "Solution",
+        "text": "On page 52 Worsley’s Navigational Log shows 6 days of readings in total. However, he mentions that the first time he used the readings, he just used Days 1-5 and the “Increments and Corrections Chart”. Do not be distracted by any other pieces.<br><br> On April 27, they spotted the moon at midnight, and he mentions that all readings were taken at 1 meter above sea level. Using that information on the “Increments and Corrections Chart” you get the number 26. However, you then need to modify that number based on the time of day and the season. Since the reading was taken at midnight, you subtract 4, as seen in the “Time of Day Modifier” section, which brings you to 22. Then, using the “Month Modifier” section you subtract another 4 because it falls between March and May. Your final number is 18. In the title there is a clue which says “A=1”. You now need to make an alphanumeric translation of “18” to get the letter “<b>R</b>”.<br><br> Repeat this process for all 5 days as follows:<br><ul><li>27 April: 26 - 4 - 4 = 18 = <b>R</b></li><li>29 April: 10 + 3 - 4 = 9 = <b>I</b></li><li>4 May: 26 - 3 - 4 = 19 = <b>S</b></li><li>5 May: 17 - 2 - 4 = 11 = <b>K</b></li><li>7 May: 28 + 1 - 4 = 25 = <b>Y</b></li></ul>"
       }
     ]
   },

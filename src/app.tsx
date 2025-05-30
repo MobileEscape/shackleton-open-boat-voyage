@@ -60,6 +60,15 @@ function App() {
   };
 
   useEffect(() => {
+    if (search.get("hints") == "true") {
+      setHintsOpen(true);
+    }
+    if (search.get("tutorial") == "true") {
+      setStep(2);
+    }
+  }, []);
+
+  useEffect(() => {
     // Starts and stops music at certain steps
     if (step === 4 || step === 5 || step === 7) {
       if (music && !IntroSound.playing()) PlaySound(IntroSound);

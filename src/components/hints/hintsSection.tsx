@@ -3,8 +3,13 @@ import { useState } from "react";
 import Button from "components/buttons/inside-button";
 import hints from "assets/data/hints.json";
 import Expandable from "components/expandable";
-import CoastlinesSolutionPart1 from "assets/Meta Solution Icon 4.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import Icon5 from "assets/icons/CHART.png";
+import Icon4 from "assets/icons/NEWS.png";
+import Icon3 from "assets/icons/PAINT.png";
+import Icon2 from "assets/icons/SEXTANT.png";
+import Icon1 from "assets/icons/WUZZLE.png";
+import Cargo from "assets/icons/Cargo.png";
+import meta from "assets/meta.png";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface HintsSectionProps {
@@ -16,45 +21,12 @@ interface HintsSectionProps {
   }[];
 }
 
-/*interface HintProps {
-  image: string | HTMLImageElement;
-}
-
-const HintImage: FunctionComponent<HintProps> = ({ image }) => {
-  return (
-    <div>
-      <LazyLoadImage
-        src={CoastlinesSolutionPart1}
-        placeholderSrc={CoastlinesSolutionPart1}
-        effect="blur"
-        className=" w-[500px]  left-20 top-20 "
-      />
-    </div>
-  );
-};*/
+const Icons = [Cargo, Icon1, Icon2, Icon3, Icon4, Icon5, meta];
 
 const Hints: FunctionComponent<HintsSectionProps> = () => {
   const [hintSections, setHintSections] = useState("");
   const [propImage, setPropImage] = useState("");
 
-  /*
-  const handleClick = (e: MouseEvent) => {
-    const target = e.currentTarget as HTMLElement;
-    setPropImage(CoastlinesSolutionPart1);
-  };
-
-  const handleExpand = () => {
-    const puzzleImage = document.getElementById("puzzleImage");
-
-    const hasEventListener = puzzleImage?.getAttribute(
-      "data-has-click-listener"
-    );
-    if (!hasEventListener) {
-      puzzleImage?.addEventListener("click", handleClick);
-      puzzleImage?.setAttribute("data-has-click-listener", "true");
-    }
-  };
-*/
   return (
     <div>
       {!hintSections && (
@@ -70,8 +42,13 @@ const Hints: FunctionComponent<HintsSectionProps> = () => {
                 setHintSections(x.puzzle);
               }}
             >
-              {" "}
-              {x.puzzle}
+              <span className="flex gap-4">
+                <img
+                  src={Icons[i]}
+                  className="w-8 h-8 bg-white/90 rounded-md"
+                />{" "}
+                {x.puzzle}
+              </span>
             </Button>
           ))}
         </div>
