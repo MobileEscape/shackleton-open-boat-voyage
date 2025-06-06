@@ -85,9 +85,9 @@ const JohnsonIsInFrame: FunctionComponent<JohnsonIsInFrameProps> = ({
               )}:${`0${minutes}`.slice(-2)}:${`0${seconds}`.slice(-2)} `}
             </p>
 
-            <div className="border-2 border-black bg-secondary/30 rounded-lg p-2 mb-4 mx-1 text-center">
+            <div className="border-2 border-black bg-secondary/30 rounded-lg p-2 mb-4 mx-2 text-center">
               <p className="relative text-2xl  px-4 z-30 font-mrsEaves leading-[1]">
-                Share your thoughts, review the game on:
+                Click below to leave a review:
               </p>
               <MainButton
                 onClick={() => setModalOpen(true)}
@@ -95,7 +95,7 @@ const JohnsonIsInFrame: FunctionComponent<JohnsonIsInFrameProps> = ({
                 text="Review"
               />
             </div>
-            <div className="border-2 border-black bg-secondary/30 rounded-lg p-2 mb-4 mx-1  text-center">
+            <div className="border-2 border-black bg-secondary/30 rounded-lg p-2 mb-4 mx-2  text-center">
               <p className="relative text-2xl  px-4 z-30 font-mrsEaves leading-[1]">
                 Buy a refill kit and check out our other products:{" "}
               </p>
@@ -113,7 +113,7 @@ const JohnsonIsInFrame: FunctionComponent<JohnsonIsInFrameProps> = ({
             <p className="relative text-2xl mb-6 px-4 z-30 font-mrsEaves mx-4 leading-[1.2]">
               Check how historically accurate this episode is{" "}
               <a
-                href="https://www.theescapemail.com/pages/shackleton-ep4-historicity"
+                href="https://www.theescapemail.com/pages/shackleton-ep5-historicity"
                 target="_blank"
                 className="z-30 text-secondary hover:text-primary transition duration-300"
               >

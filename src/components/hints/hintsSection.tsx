@@ -25,7 +25,6 @@ const Icons = [Cargo, Icon1, Icon2, Icon3, Icon4, Icon5, meta];
 
 const Hints: FunctionComponent<HintsSectionProps> = () => {
   const [hintSections, setHintSections] = useState("");
-  const [propImage, setPropImage] = useState("");
 
   return (
     <div>
@@ -61,7 +60,7 @@ const Hints: FunctionComponent<HintsSectionProps> = () => {
           >
             {"<"}
           </button>
-          <h2 className="text-white text-6xl font-kingEdwards text-center mb-4">
+          <h2 className="text-white text-6xl font-kingEdwards text-center my-5">
             {hintSections}
           </h2>
           {hints

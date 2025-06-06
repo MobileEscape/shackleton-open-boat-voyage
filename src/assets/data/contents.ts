@@ -8,52 +8,44 @@ interface Asset {
 
 const contents: Asset[] = [
   {
-    label: "Haakon Bay Map",
+    label: "Paint Brush",
     link: "/our-apologies?index=0",
   },
   {
-    label: "Paint Brush",
+    label: "Painter's Palette",
     link: "/our-apologies?index=1",
   },
   {
-    label: "Painter's Palette",
+    label: "Sky Linocut",
     link: "/our-apologies?index=2",
   },
   {
-    label: "Sighting Table",
+    label: "Haakon Bay Map",
     link: "/our-apologies?index=3",
   },
   {
-    label: "Incremens Chart",
+    label: "Charts",
     link: "/our-apologies?index=4",
   },
   {
-    label: "Journal Pages x 5",
+    label: "Sexant Tool",
     link: "/our-apologies?index=5",
   },
   {
-    label: "Sexant Tool",
+    label: "Newspaper ",
     link: "/our-apologies?index=6",
   },
   {
-    label: "Wuzzle Puzzle",
+    label: "Rime of the Mariner",
     link: "/our-apologies?index=7",
   },
   {
-    label: "Sky Linocut",
+    label: "Journal Pages x 6",
     link: "/our-apologies?index=8",
   },
   {
-    label: "Newspaper Clipping",
-    link: "/our-apologies?index=9",
-  },
-  {
-    label: "Rime of the Ancient Mariner",
-    link: "/our-apologies?index=10",
-  },
-  {
     label: "Flow Card",
-    link: "/our-apologies?index=11",
+    link: "/our-apologies?index=9",
   },
 ];
 

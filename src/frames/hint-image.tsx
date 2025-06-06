@@ -6,6 +6,7 @@ import OctagonVideo from "components/framingvideo";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import CairdAssemble from "assets/Hint-Images/CairdAssemble.mp4";
+import { FadeOutSound, IntroSound, PlaySound } from "sounds";
 import NewspaperSolution from "assets/Hint-Images/NewspaperSolution.jpg";
 import PaletteSolution from "assets/Hint-Images/PaletteSolution.png";
 import Sextant from "assets/Hint-Images/Sextant.mp4";
@@ -66,16 +67,13 @@ const HintImageFrame: FunctionComponent<HintImageProps> = ({}) => {
           <OctagonVideo
             src={image}
             className="w-full max-w-[90%] m-auto"
-            autoPlay
             triggerPlay={true}
             subtitles={[]}
-            loop
-            muted
+            onEnded={() => PlaySound(IntroSound)}
+            onPause={() => PlaySound(IntroSound)}
+            onPlay={() => FadeOutSound(IntroSound)}
             playsInline
             controls={false}
-            onEnded={() => {
-              navigate(-1);
-            }}
           />
           <MainButton
             onClick={() => navigate(-1)}

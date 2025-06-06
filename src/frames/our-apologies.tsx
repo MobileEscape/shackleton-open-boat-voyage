@@ -5,7 +5,6 @@ import { FunctionComponent, lazy } from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Brush from "assets/contents/Brush.png";
 import FlowCard from "assets/contents/FlowCard.png";
-import Increments from "assets/contents/Increments.png";
 import Linocut from "assets/contents/Linocut.png";
 import Map from "assets/contents/Map.png";
 import NewsPaper from "assets/contents/NewsPaper.png";
@@ -14,18 +13,11 @@ import Pallet from "assets/contents/Pallet.png";
 import Rime from "assets/contents/Rime.png";
 import Sextant from "assets/contents/Sextant.png";
 import Sightings from "assets/contents/Sightings.png";
-import Wuzzle from "assets/contents/Wuzzle.png";
 
 const MainButton = lazy(() => import("components/buttons/main-button"));
 interface OurApologiesProps extends FrameProps {}
 
 const getHelp = [
-  {
-    image: Map,
-    loading: Map,
-    title: "Haakon Bay Map",
-    text: `Your envelope should have a map. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
-  },
   {
     image: Brush,
     loading: Brush,
@@ -39,25 +31,23 @@ const getHelp = [
     text: `Your envelope should have a Painter's Pallet. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
+    image: Linocut,
+    loading: Linocut,
+    title: "Sky Linocut",
+    text: `Your envelope should have a Sky Linocut. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+  },
+  {
+    image: Map,
+    loading: Map,
+    title: "Haakon Bay Map",
+    text: `Your envelope should have a map. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+  },
+  {
     image: Sightings,
     loading: Sightings,
     title: "Sightings Table",
     text: `Your envelope should have Sightings table. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
-
-  {
-    image: Increments,
-    loading: Increments,
-    title: "Increments and Corrections Chart",
-    text: `Your envelope should have an Increments and Corrections Chart. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
-  },
-  {
-    image: Pages,
-    loading: Pages,
-    title: "5 Journal Pages",
-    text: `Your envelope should have 5 Journal Pages. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
-  },
-
   {
     image: Sextant,
     loading: Sextant,
@@ -65,31 +55,23 @@ const getHelp = [
     text: `Your envelope should have a Sextant tool. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
   {
-    image: Wuzzle,
-    loading: Wuzzle,
-    title: "Wuzzle",
-    text: `Your envelope should have a Wuzzle Puzzle. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
-  },
-  {
-    image: Linocut,
-    loading: Linocut,
-    title: "Sky Linocut",
-    text: `Your envelope should have a Sky Linocut. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
-  },
-  {
     image: NewsPaper,
     loading: NewsPaper,
     title: "NewsPaper Clipping",
     text: `Your envelope should have a NewsPaper Clipping. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
-
   {
     image: Rime,
     loading: Rime,
     title: "Rime of the Mariner",
     text: `Your envelope should have a Rime of the Mariner. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
   },
-
+  {
+    image: Pages,
+    loading: Pages,
+    title: "5 Journal Pages",
+    text: `Your envelope should have 6 Journal Pages, from page number 43 to 54. If you're missing this item please contact <a style="color:darkblue" href="mailto:info@theescapemail.com" target="_blank">info@theescapemail.com</a> and we'll help make it right.`,
+  },
   {
     image: FlowCard,
     loading: FlowCard,

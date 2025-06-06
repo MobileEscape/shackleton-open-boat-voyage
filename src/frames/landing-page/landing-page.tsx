@@ -30,7 +30,7 @@ const InitialFrame: FunctionComponent<InitialFrameProps> = ({ index }) => {
               ></Trapeze>
             </div>
             <h1 className="absolute -bottom-5 w-full bg-[rgba(61,72,96,1)] flex flex-col text-center text-3xl md:text-5xl justify-center font-mrsEaves my-5   text-white">
-              EPISODE 5 <p className="text-xl -mt-3">An Open Boat Voyage</p>
+              EPISODE 5 <p className="text-xl -mt-3">An Open-Boat Voyage</p>
             </h1>
             <div className="bg-primary flex justify-center py-2  ">
               <img className="w-80" src={Logo} loading="lazy" alt=""></img>
