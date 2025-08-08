@@ -15,7 +15,6 @@ import { useContext } from "react";
 import { AppContext } from "contexts/app";
 import Border from "assets/Border-bg.png";
 import ResetGameSection from "./sections/reset-game";
-import { link } from "fs";
 import { useNavigate } from "react-router-dom";
 
 interface MenuProps {}
@@ -157,7 +156,7 @@ const Menu: FunctionComponent<MenuProps> = () => {
           </svg>
         </div>
       ),
-      link: "https://www.theescapemail.com/pages/shackleton-ep4-historicity",
+      link: "https://www.theescapemail.com/pages/shackleton-ep5-historicity",
     },
     {
       button: (
@@ -196,8 +195,6 @@ const Menu: FunctionComponent<MenuProps> = () => {
       setTimeout(() => {
         setMenuSection(undefined);
         setMenuIndex((prev) => prev + 1);
-        if (furthestVisitedStep < 6 && furthestVisitedStep > 2)
-          setPaused(false);
       }, 300);
     }
   }, [menu]);
@@ -218,7 +215,11 @@ const Menu: FunctionComponent<MenuProps> = () => {
           "fixed -top-2 -left-2 w-[150vw] h-[100vh]  bg-black transition duration-500",
           menu ? "opacity-80" : "opacity-0 invisible"
         )}
-        onClick={() => setMenu(false)}
+        onClick={() => {
+          setMenu(false);
+          if (furthestVisitedStep < 6 && furthestVisitedStep > 3)
+            setPaused(false);
+        }}
       ></div>
       <div className="h-[90px] flex-shrink-0"></div>
       <div className="relative flex-grow h-0 flex flex-col z-40 ">
